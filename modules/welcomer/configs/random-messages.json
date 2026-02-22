@@ -1,0 +1,168 @@
+{
+  "description": {
+    "en": "Manage the randomly send messages here",
+    "de": "Passe hier die Nachrichten an, die zufällig gesendet werden sollen"
+  },
+  "humanName": {
+    "en": "Random messages",
+    "de": "Zufällige Nachrichten"
+  },
+  "filename": "random-messages.json",
+  "configElements": true,
+  "content": [
+    {
+      "name": "type",
+      "humanName": {
+        "en": "Message-Type",
+        "de": "Nachricht-Type"
+      },
+      "default": {
+        "en": ""
+      },
+      "description": {
+        "en": "This sets in which content the message should get send",
+        "de": "Dies gibt an, in welchem Kontext diese Nachricht versendet werden soll"
+      },
+      "type": "select",
+      "content": [
+        "join",
+        "leave",
+        "boost",
+        "unboost"
+      ]
+    },
+    {
+      "name": "message",
+      "humanName": {
+        "en": "Message",
+        "de": "Nachricht"
+      },
+      "allowGeneratedImage": true,
+      "default": {
+        "en": ""
+      },
+      "description": {
+        "en": "Message that should get send",
+        "de": "Nachricht, die gesendet werden soll"
+      },
+      "type": "string",
+      "allowEmbed": true,
+      "params": [
+        {
+          "name": "mention",
+          "description": {
+            "en": "Mentions the user",
+            "de": "Erwähnung des Nutzers"
+          }
+        },
+        {
+          "name": "memberProfilePictureUrl",
+          "description": {
+            "en": "URL of the user's avatar",
+            "de": "URL zum Avatar des Nutzers"
+          },
+          "isImage": true
+        },
+        {
+          "name": "servername",
+          "description": {
+            "en": "Name of the guild",
+            "de": "Servername"
+          }
+        },
+        {
+          "name": "tag",
+          "description": {
+            "en": "Tag of the user",
+            "de": "Tag des Nutzers"
+          }
+        },
+        {
+          "name": "createdAt",
+          "description": {
+            "en": "Date when account was created",
+            "de": "Datum an dem der Account erstellt wurde"
+          }
+        },
+        {
+          "name": "tag",
+          "description": {
+            "en": "Tag of the user",
+            "de": "Tag des Nutzers"
+          }
+        },
+        {
+          "name": "memberProfilePictureUrl",
+          "description": {
+            "en": "URL of the user's avatar",
+            "de": "URL zum Avatar des Nutzers"
+          },
+          "isImage": true
+        },
+        {
+          "name": "joinedAt",
+          "description": {
+            "en": "Date when user joined guild",
+            "de": "Datum, an dem der Nutzer den Server betreten hat"
+          }
+        },
+        {
+          "name": "guildUserCount",
+          "description": {
+            "en": "Count of users on the guild",
+            "de": "Anzahl von Nutzern auf dem Server"
+          }
+        },
+        {
+          "name": "guildMemberCount",
+          "description": {
+            "en": "Count of members (without bots) on the guild",
+            "de": "Anzahl von Nutzern auf dem Server"
+          }
+        },
+        {
+          "name": "mention",
+          "description": {
+            "en": "Mention of the user who boosted",
+            "de": "Erwähnung des Nutzers"
+          }
+        },
+        {
+          "name": "boostCount",
+          "description": {
+            "en": "Total count of boosts",
+            "de": "Gesamte Anzahl an Boosts"
+          }
+        },
+        {
+          "name": "guildLevel",
+          "description": {
+            "en": "Boost-Level of the guild after the boost",
+            "de": "Boost-Level nach dem Boost"
+          }
+        },
+        {
+          "name": "mention",
+          "description": {
+            "en": "Mention of the user who unboosted",
+            "de": "Erwähnung des Nutzers"
+          }
+        },
+        {
+          "name": "boostCount",
+          "description": {
+            "en": "Total count of boosts",
+            "de": "Gesamte Anzahl an Boosts"
+          }
+        },
+        {
+          "name": "guildLevel",
+          "description": {
+            "en": "Boost-Level of the guild after the unboost",
+            "de": "Boost-Level nach dem Boost"
+          }
+        }
+      ]
+    }
+  ]
+}

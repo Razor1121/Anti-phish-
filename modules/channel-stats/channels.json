@@ -1,0 +1,188 @@
+{
+  "description": {},
+  "humanName": {
+    "en": "Configuration",
+    "de": "Konfiguration"
+  },
+  "configElementName": {
+    "de": {
+      "one": "Statistik-Kanal",
+      "more": "Statistik-Kanäle"
+    },
+    "en": {
+      "one": "Statistics-Channel",
+      "more": "Statistics-Channels"
+    }
+  },
+  "filename": "channels.json",
+  "configElements": true,
+  "content": [
+    {
+      "name": "channelID",
+      "humanName": {
+        "de": "Kanal",
+        "en": "Channel"
+      },
+      "default": {
+        "en": ""
+      },
+      "description": {
+        "en": "ID of the voice channel",
+        "de": "ID des Sprachkanals"
+      },
+      "type": "channelID"
+    },
+    {
+      "name": "channelName",
+      "humanName": {
+        "de": "Kanalname",
+        "en": "Channel-Name"
+      },
+      "default": {
+        "en": ""
+      },
+      "description": {
+        "en": "Name of Channel",
+        "de": "Name des Kanals"
+      },
+      "type": "string",
+      "params": [
+        {
+          "name": "userCount",
+          "description": {
+            "en": "Total count of users on your server",
+            "de": "Anzahl an Nutzern auf dem Server"
+          }
+        },
+        {
+          "name": "memberCount",
+          "description": {
+            "en": "Total count of members (not bots) on your server",
+            "de": "Anzahl an Mitgliedern (keine Bots) auf dem Server"
+          }
+        },
+        {
+          "name": "onlineUserCount",
+          "description": {
+            "en": "Total count of online (dnd or online status) users on your server",
+            "de": "Anzahl an Mitgliedern (keine Bots) auf dem Server, welche Online sind (Bitte nicht stören oder Online Status)"
+          }
+        },
+        {
+          "name": "channelCount",
+          "description": {
+            "en": "Total count of channels on your server",
+            "de": "Anzahl der Kanäle auf dem Server"
+          }
+        },
+        {
+          "name": "roleCount",
+          "description": {
+            "en": "Total count of roles on your server",
+            "de": "Anzahl der Rollen auf dem Server"
+          }
+        },
+        {
+          "name": "botCount",
+          "description": {
+            "en": "Count of Bots on your server",
+            "de": "Anzahl der Bots auf dem Server"
+          }
+        },
+        {
+          "name": "dndCount",
+          "description": {
+            "en": "Count of members (not bots) with DND as status",
+            "de": "Anzahl der Mitglieder (keine Bots) mit Bitte nicht stören als Status"
+          }
+        },
+        {
+          "name": "onlineMemberCount",
+          "description": {
+            "en": "Count of members (not bots) with online (and only online) as status",
+            "de": "Anzahl der Mitglieder (keine Bots) mit Online (und NUR Online) als Status"
+          }
+        },
+        {
+          "name": "awayCount",
+          "description": {
+            "en": "Count of members (not bots) with away status",
+            "de": "Anzahl der Mitglieder (keine Bots) mit \"Abwesend\" Status"
+          }
+        },
+        {
+          "name": "offlineCount",
+          "description": {
+            "en": "Count of members (not bots) with offline status",
+            "de": "Anzahl der Mitglieder (keine Bots) mit \"Offline\" status"
+          }
+        },
+        {
+          "name": "guildBoosts",
+          "description": {
+            "en": "Show how often this guild was boosted",
+            "de": "Zeigt, wie oft der Server geboostet wurde"
+          }
+        },
+        {
+          "name": "boostLevel",
+          "description": {
+            "en": "Shows the current boost-level of this guild",
+            "de": "Zeigt das aktuelle Boost-Level des Servers"
+          }
+        },
+        {
+          "name": "boosterCount",
+          "description": {
+            "en": "Count of boosters on this guild",
+            "de": "Anzahl an Boostern auf dem Server"
+          }
+        },
+        {
+          "name": "emojiCount",
+          "description": {
+            "en": "Count of emojis on this guild",
+            "de": "Anzahl an Emojis auf dem Server"
+          }
+        },
+        {
+          "name": "currentTime",
+          "description": {
+            "en": "Current time and date",
+            "de": "Aktuelles Datum und Uhrzeit"
+          }
+        },
+        {
+          "name": "userWithRoleCount-<ID>",
+          "description": {
+            "en": "Count of members with a specific role (replace \"<ID>\" with an actual role-id)",
+            "de": "Anzahl von Nutzern mit einer bestimmen Rolle (bitte \"<ID>\" mit einer echten Rollen-ID ersetzen)"
+          }
+        },
+        {
+          "name": "onlineUserWithRoleCount-<ID>",
+          "description": {
+            "en": "Count of members with a specific role who are online (replace \"<ID>\" with an actual role-id)",
+            "de": "Anzahl von Nutzern mit einer bestimmen Rolle, die online sind (bitte \"<ID>\" mit einer echten Rollen-ID ersetzen)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "updateInterval",
+      "humanName": {
+        "de": "Aktualisierungsintervall",
+        "en": "Update-Interval"
+      },
+      "default": {
+        "en": "15",
+        "de": 15
+      },
+      "description": {
+        "en": "You can set an interval here in which the bot should update the channels. Must be higher than seven; in minutes.",
+        "de": "Du kannst hier ein Intervall einstellen, in welchem der Bot die Kanäle aktualisieren soll. Muss höher als sieben sein; in Minuten."
+      },
+      "type": "integer"
+    }
+  ]
+}

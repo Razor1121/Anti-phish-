@@ -1,0 +1,24 @@
+{
+  "name": "fun",
+  "author": {
+    "scnxOrgID": "1",
+    "name": "SCDerox (SC Network Team)",
+    "link": "https://github.com/SCDerox"
+  },
+  "commands-dir": "/commands",
+  "config-example-files": [
+    "config.json"
+  ],
+  "tags": [
+    "fun"
+  ],
+  "openSourceURL": "https://github.com/SCNetwork/CustomDCBot/tree/main/modules/fun",
+  "humanReadableName": {
+    "en": "Fun-Commands",
+    "de": "Fun-Befehle"
+  },
+  "description": {
+    "en": "Some random fun commands like /hug or /random",
+    "de": "Einige Spaß-Commands, wie /hug oder /random"
+  }
+}

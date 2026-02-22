@@ -1,0 +1,25 @@
+{
+  "name": "afk-system",
+  "author": {
+    "scnxOrgID": "1",
+    "name": "SCDerox (SC Network Team)",
+    "link": "https://github.com/SCDerox"
+  },
+  "commands-dir": "/commands",
+  "models-dir": "/models",
+  "events-dir": "/events",
+  "config-example-files": [
+    "config.json"
+  ],
+  "tags": [
+    "tools"
+  ],
+  "openSourceURL": "https://github.com/SCNetwork/CustomDCBot/tree/main/modules/afk-system",
+  "humanReadableName": {
+    "en": "AFK-System"
+  },
+  "description": {
+    "en": "Allow users to set their AFK-Status and notify other users if they try to reach them",
+    "de": "Erlaubt es deinen Nutzern, ihren AFK-Status zu setzen und benachrichtigt andere Nutzer, wenn sie diesen versuchen zu erreichen"
+  }
+}

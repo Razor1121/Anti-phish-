@@ -1,0 +1,6 @@
+/data/
+/node_modules/
+/config/
+src/functions/scnx-integration.js
+/.vscode/
+/.idea/

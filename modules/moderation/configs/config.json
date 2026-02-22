@@ -1,0 +1,493 @@
+{
+  "description": {
+    "en": "You can set up permissions and features of this module here",
+    "de": "Du kannst hier die Rechte dieses Modules einstellen"
+  },
+  "humanName": {
+    "en": "Configuration",
+    "de": "Konfiguration"
+  },
+  "filename": "config.json",
+  "commandsWarnings": {
+    "special": [
+      {
+        "name": "/moderate",
+        "info": {
+          "en": "Each moderator needs to be able to execute the /moderate command, so set your permissions in your server-settings accordingly. Additionally, moderator need to be entered into their level below.",
+          "de": "Jeder Modator muss den /moderate Befehl ausführen können, bitte konfiguriere das in deinen Server-Einstellungen. Zusätzlich muss jede Moderator-Rolle zu ihrem Level unten manuell eingetragen werden."
+        }
+      }
+    ]
+  },
+  "content": [
+    {
+      "name": "logchannel-id",
+      "humanName": {
+        "de": "Log-Kanal",
+        "en": "Log-Channel"
+      },
+      "default": {
+        "en": ""
+      },
+      "description": {
+        "en": "Moderative actions will get logged in this channel",
+        "de": "Moderative Aktionen werden in diesem Kanal geloggt"
+      },
+      "type": "channelID"
+    },
+    {
+      "name": "quarantine-role-id",
+      "humanName": {
+        "de": "Quarantäne-Rolle",
+        "en": "Quarantine-Role"
+      },
+      "default": {
+        "en": ""
+      },
+      "description": {
+        "en": "When a user gets quarantined, all of their roles will get removed and this quarantine-role wil get assigned",
+        "de": "Wenn ein Nutzer in Quarantäne gesteckt wird, werden alle Rollen von diesem entfernt und nur diese hinzugefügt"
+      },
+      "type": "roleID"
+    },
+    {
+      "name": "report-channel-id",
+      "default": {
+        "en": ""
+      },
+      "humanName": {
+        "en": "Report-Channel",
+        "de": "Report-Kanal"
+      },
+      "description": {
+        "en": "Channel in which user-reports should get send. (optional, default: Log-Channel)",
+        "de": "Kanal, in welchem Nutzer-Reports should get send. (optional, default: Log-Kanal)"
+      },
+      "type": "channelID",
+      "allowNull": true
+    },
+    {
+      "name": "remove-all-roles-on-quarantine",
+      "humanName": {
+        "de": "Bei Quarantäne alle Rollen entfernen",
+        "en": "Remove all roles on quarantine"
+      },
+      "default": {
+        "en": true,
+        "de": true
+      },
+      "description": {
+        "en": "If enabled all roles from a user get removed if they get quarantined (they get saved an can be restored with /unquarantine)",
+        "de": "Wenn diese Option aktiviert ist, werden alle Rollen eines Nutzers entfernt, wenn er in Quarantäne gesetzt wird (sie werden gespeichert und mit /unquarantine wiederhergestellt)"
+      },
+      "type": "boolean"
+    },
+    {
+      "name": "moderator-roles_level1",
+      "humanName": {
+        "en": "Moderator-Level 1"
+      },
+      "default": {
+        "en": [],
+        "de": []
+      },
+      "description": {
+        "en": "Moderator roles that can perform the following actions: Warn",
+        "de": "Rollen, die folgende Aktionen ausführen können: Warn"
+      },
+      "type": "array",
+      "content": "roleID"
+    },
+    {
+      "name": "moderator-roles_level2",
+      "humanName": {
+        "en": "Moderator-Level 2"
+      },
+      "default": {
+        "en": [],
+        "de": []
+      },
+      "description": {
+        "en": "Moderator roles that can perform the following actions: Warn, Mute, Unmute, Lock, Unlock, Channelmute, Remove-Channel-Mute",
+        "de": "Rollen, die folgende Aktionen ausführen können: Warn, Mute, Unmute, Channelmute, Channel-Mute entfernen"
+      },
+      "type": "array",
+      "content": "roleID"
+    },
+    {
+      "name": "moderator-roles_level3",
+      "humanName": {
+        "en": "Moderator-Level 3"
+      },
+      "default": {
+        "en": [],
+        "de": []
+      },
+      "description": {
+        "en": "Moderator roles that can perform the following actions: Warn, Mute, Unmute, Kick, Clear",
+        "de": "Rollen, die folgende Aktionen ausführen können: Warn, Mute, Unmute, Kick, Clear"
+      },
+      "type": "array",
+      "content": "roleID"
+    },
+    {
+      "name": "moderator-roles_level4",
+      "humanName": {
+        "en": "Moderator-Level 4"
+      },
+      "default": {
+        "en": [],
+        "de": []
+      },
+      "description": {
+        "en": "Moderator roles that can perform the following actions: Warn, Mute, Unmute, Kick, Clear, Ban, Unban",
+        "de": "Rollen, die folgende Aktionen ausführen können: Warn, Mute, Unmute, Kick, Clear, Ban, Unban"
+      },
+      "type": "array",
+      "content": "roleID"
+    },
+    {
+      "name": "roles-to-ping-on-report",
+      "humanName": {
+        "de": "Rollenpings bei Report",
+        "en": "Roles to ping on reports"
+      },
+      "default": {
+        "en": [],
+        "de": []
+      },
+      "description": {
+        "en": "Roles that should get pinged in the log-channel when a user reports someone",
+        "de": "Rollen, die im log-Kanal gepingt werden sollen, wenn ein Nutzer jemanden Reportet"
+      },
+      "type": "array",
+      "content": "roleID"
+    },
+    {
+      "name": "require_reason",
+      "humanName": {
+        "de": "Begründung erzwingen",
+        "en": "Fore moderators to set a reason"
+      },
+      "default": {
+        "en": true,
+        "de": true
+      },
+      "description": {
+        "en": "Should moderators be required to set a reason?",
+        "de": "Sollen Moderatoren verpflichtet werden, eine Begründung anzugeben?"
+      },
+      "type": "boolean"
+    },
+    {
+      "name": "require_proof",
+      "humanName": {
+        "de": "Beweis-Bild erzwingen",
+        "en": "Fore moderators to upload proof"
+      },
+      "dependsOn": "require_reason",
+      "default": {
+        "en": false,
+        "de": false
+      },
+      "description": {
+        "en": "Should moderators be required to upload proof for their actions?",
+        "de": "Sollen Moderatoren verpflichtet werden, einen Beweis hochzuladen?"
+      },
+      "type": "boolean"
+    },
+    {
+      "name": "action_on_invite",
+      "humanName": {
+        "de": "Aktion bei Invite",
+        "en": "Action on invite"
+      },
+      "default": {
+        "en": "mute",
+        "de": "mute"
+      },
+      "description": {
+        "en": "What should the bot do if someone posts an invite link?",
+        "de": "Was soll der Bot tun, wenn jemand einen Invite sendet?"
+      },
+      "type": "select",
+      "content": [
+        "none",
+        "warn",
+        "mute",
+        "kick",
+        "quarantine",
+        "ban"
+      ]
+    },
+    {
+      "name": "action_on_scam_link",
+      "humanName": {
+        "de": "Aktion bei Scam-Link",
+        "en": "Action on Scam-Link"
+      },
+      "default": {
+        "en": "none",
+        "de": "mute"
+      },
+      "description": {
+        "en": "What should the bot do if someone posts an suspicious or confirmed scam link?",
+        "de": "Was soll der Bot tun, wenn jemand einen Link zu einer verdächtigen oder bestätigten Scam-Seite sendet?"
+      },
+      "type": "select",
+      "content": [
+        "none",
+        "warn",
+        "mute",
+        "kick",
+        "quarantine",
+        "ban"
+      ]
+    },
+    {
+      "name": "phishing-log-channel-id",
+      "humanName": {
+        "de": "Phishing-Protokoll-Kanal",
+        "en": "Phishing Log Channel"
+      },
+      "default": {
+        "en": "",
+        "de": ""
+      },
+      "description": {
+        "en": "Optional channel where auto phishing detections are logged.",
+        "de": "Optionaler Kanal, in dem automatische Phishing-Erkennungen protokolliert werden."
+      },
+      "type": "channelID",
+      "allowNull": true
+    },
+    {
+      "name": "scam_link_level",
+      "humanName": {
+        "de": "Level der Scam-Link-Erkennung",
+        "en": "Level of Scam-Link-Detection"
+      },
+      "default": {
+        "en": "confirmed",
+        "de": "confirmed"
+      },
+      "description": {
+        "en": "Select the Level of Scam-Link-Filter. \"confirmed\" only contains verified Scam-Domains, while \"suspicious\" may contain not-harmful domains.",
+        "de": "\"confirmed\" enthält nur Scam-Domains, die wirklich als solche verifiziert wurden, während \"suspicious\" auch nicht-gefährdende Domains beinhalten kann"
+      },
+      "type": "select",
+      "content": [
+        "confirmed",
+        "suspicious"
+      ]
+    },
+    {
+      "name": "whitelisted_channels_for_invite_blocking",
+      "humanName": {
+        "de": "Erlaubte Kanäle für Invitesperre",
+        "en": "Whitelisted channels for invite-ban"
+      },
+      "default": {
+        "en": [],
+        "de": []
+      },
+      "description": {
+        "en": "Channels or categories where invite blocking is disabled",
+        "de": "Kanäle oder Kategorien, in welchen die Invitesperre deaktiviert ist"
+      },
+      "type": "array",
+      "content": "channelID"
+    },
+    {
+      "name": "whitelisted_roles_for_invite_blocking",
+      "humanName": {
+        "de": "Erlaubte Rollen für Invitesperre",
+        "en": "Whitelisted roles for invite-ban"
+      },
+      "default": {
+        "en": [],
+        "de": []
+      },
+      "description": {
+        "en": "ID of Roles which are allowed to bypass invite blocking",
+        "de": "Rollen, welche die Invitesperre umgehen dürfen"
+      },
+      "type": "array",
+      "content": "roleID"
+    },
+    {
+      "name": "blacklisted_words",
+      "humanName": {
+        "de": "Gesperrte Wörter",
+        "en": "Blacklisted words"
+      },
+      "default": {
+        "en": [],
+        "de": []
+      },
+      "description": {
+        "en": "Words that are blacklisted",
+        "de": "Wörter, die blockiert sind"
+      },
+      "type": "array",
+      "content": "string"
+    },
+    {
+      "name": "phishing-custom-patterns",
+      "humanName": {
+        "de": "Eigene Phishing-Muster",
+        "en": "Custom phishing patterns"
+      },
+      "default": {
+        "en": [],
+        "de": []
+      },
+      "description": {
+        "en": "Add your own regexes/keywords/strings to flag as phishing (one entry per line, RegExp syntax supported)",
+        "de": "Füge eigene Regexe/Stichwörter/String hinzu, die als Phishing markiert werden sollen (jeweils eine pro Zeile, RegExp-Syntax möglich)"
+      },
+      "type": "array",
+      "content": "string"
+    },
+    {
+      "name": "action_on_posting_blacklisted_word",
+      "humanName": {
+        "de": "Aktion bei gesperrtem Wort",
+        "en": "Action on blacklisted Word"
+      },
+      "default": {
+        "en": "mute",
+        "de": "mute"
+      },
+      "description": {
+        "en": "What should the bot do if someone posts a blacklisted word?",
+        "de": "Was soll der Bot tun, wenn jemand ein gesperrtes Wort sagt?"
+      },
+      "type": "select",
+      "content": [
+        "none",
+        "warn",
+        "mute",
+        "kick",
+        "ban",
+        "quarantine"
+      ]
+    },
+    {
+      "name": "changeNicknames",
+      "humanName": {
+        "de": "Nicknamen bei Mute- / Quarantäne ändern",
+        "en": "Change nicknames on Mute- / Quarantine"
+      },
+      "default": {
+        "en": false,
+        "de": false
+      },
+      "description": {
+        "en": "If enabled, the user will get renamed when they get muted or quarantined",
+        "de": "Wenn aktiviert, wird der Nutzer umbenannt, wenn er gemutet oder in Quarantäne gesteckt wird"
+      },
+      "type": "boolean"
+    },
+    {
+      "name": "changeNicknameOnMute",
+      "dependsOn": "changeNicknames",
+      "humanName": {
+        "de": "Neuer Nickname bei Mute",
+        "en": "New nickname on mute"
+      },
+      "default": {
+        "en": "%nickname%",
+        "de": "%nickname%"
+      },
+      "description": {
+        "en": "The nickname in which the user should be renamed when they get muted",
+        "de": "Der Nickname, in welchen der Nutzer umbenannt werden soll, wenn er gemuted wird"
+      },
+      "type": "string",
+      "params": [
+        {
+          "name": "nickname",
+          "description": {
+            "en": "Original nickname of the user"
+          }
+        }
+      ]
+    },
+    {
+      "name": "changeNicknameOnQuarantine",
+      "humanName": {
+        "de": "Nickname während der Quarantäne",
+        "en": "Nickname during quarantine"
+      },
+      "dependsOn": "changeNicknames",
+      "default": {
+        "en": "%nickname%",
+        "de": "%nickname%"
+      },
+      "description": {
+        "en": "The nickname in which the user should be renamed when they get quarantined"
+      },
+      "type": "string",
+      "params": [
+        {
+          "name": "nickname",
+          "description": {
+            "en": "Original nickname of the user"
+          }
+        }
+      ]
+    },
+    {
+      "name": "automod",
+      "humanName": {
+        "de": "Automod",
+        "en": "Automod"
+      },
+      "default": {
+        "en": {},
+        "de": {}
+      },
+      "description": {
+        "en": "You can define here what should happen (options: mute, kick, ban, quarantine) when someone gets x warns. Specify duration by writing :<Duration> after the action.",
+        "de": "Du kannst hier festlegen, was passieren soll (optionen: mute, kick, ban), wenn jemand x Verwarnungen bekommt. Länge festlegen, indem :<Länge> hinter die Aktion geschrieben wird."
+      },
+      "type": "keyed",
+      "content": {
+        "key": "integer",
+        "value": "string"
+      }
+    },
+    {
+      "name": "warnsExpire",
+      "humanName": {
+        "de": "Sollen Warns automatisch gelöscht werden?",
+        "en": "Should warns be deleted automatically?"
+      },
+      "default": {
+        "en": false
+      },
+      "description": {
+        "en": "If enabled, warns will be deleted automatically after a certain period of time. Warns expired this way will completely disappear and can not be viewed again after they expired.",
+        "de": "Wenn aktiviert, werden Warns automatisch nach einer bestimmten Zeitspanne gelöscht. Auf diese Weiße abgelaufene Warns werden komplett verschwinden und können nie erneut gesehen werden."
+      },
+      "type": "boolean"
+    },
+    {
+      "name": "warnExpiration",
+      "humanName": {
+        "de": "Zeit, nach der Warns automatisch ablaufen",
+        "en": "Time after which warns will be automatically removed"
+      },
+      "default": {
+        "en": "3 months"
+      },
+      "dependsOn": "warnsExpire",
+      "description": {
+        "en": "Warns will be automatically deleted after this value after it's creation. Please note that this action will delete existing warns if they expired. Enter an english value, such as  \"1y\" (= 1 year), \"3 Months\" (= 3 Months) oder \"2w\" (= 2 Weeks).",
+        "de": "Warnungen werden automatisch gelöscht, wenn sie diese Zeitspanne nach Erstellung erreicht haben. Trage einen englischen Wert, wie \"1y\" (= 1 Jahr), \"3 Months\" (= 3 Monate) oder \"2w\" (= 2 Woche) ein."
+      },
+      "type": "string"
+    }
+  ]
+}

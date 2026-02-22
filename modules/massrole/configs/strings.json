@@ -1,0 +1,52 @@
+{
+  "description": {
+    "en": "Edit the messages and strings of the module here",
+    "de": "Stelle hier die Nachrichten des Modules ein"
+  },
+  "humanName": {
+    "en": "Messages",
+    "de": "Nachrichten"
+  },
+  "commandsWarnings": {
+    "normal": [
+      "/massrole"
+    ]
+  },
+  "filename": "strings.json",
+  "content": [
+    {
+      "name": "done",
+      "humanName": {
+        "en": "Action executed",
+        "de": "Aktion ausgeführt"
+      },
+      "default": {
+        "en": "The action was executed successfully.",
+        "de": "Die Aktion wurde erfolgreich ausgeführt."
+      },
+      "description": {
+        "en": "This messages gets send when a action was executed successfully",
+        "de": "Diese Nachricht wird verschickt, wenn eine Akton erfolgreich ausgeführt wurde"
+      },
+      "type": "string",
+      "allowEmbed": true
+    },
+    {
+      "name": "notDone",
+      "humanName": {
+        "en": "Action not executed",
+        "de": "Aktion nicht ausgeführt"
+      },
+      "default": {
+        "en": "The Action couldn't be executed because the bot has not enough permissions.",
+        "de": "Die Aktion konnte nicht vollständig ausgeführt werden, da der Bot nicht genug Rechte hat."
+      },
+      "description": {
+        "en": "This messages gets send when a action was not executed successfully",
+        "de": "Diese Nachricht wird verschickt, wenn eine Aktion nicht erfolgreich ausgeführt wurde"
+      },
+      "type": "string",
+      "allowEmbed": true
+    }
+  ]
+}

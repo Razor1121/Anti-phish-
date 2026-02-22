@@ -1,0 +1,15 @@
+{
+  "description": {},
+  "humanName": {
+    "en": "Configuration",
+    "de": "Konfiguration"
+  },
+  "filename": "config.json",
+  "commandsWarnings": {
+    "normal": [
+      "/admin",
+      "/stealemote"
+    ]
+  },
+  "content": []
+}

@@ -1,0 +1,26 @@
+{
+  "name": "temp-channels",
+  "author": {
+    "scnxOrgID": "2",
+    "name": "hfgd",
+    "link": "https://github.com/hfgd123"
+  },
+  "models-dir": "/models",
+  "events-dir": "/events",
+  "commands-dir": "/commands",
+  "config-example-files": [
+    "config.json"
+  ],
+  "tags": [
+    "community"
+  ],
+  "openSourceURL": "https://github.com/SCNetwork/CustomDCBot/tree/main/modules/temp-channels",
+  "humanReadableName": {
+    "en": "Temporary channels",
+    "de": "Temporäre Channel"
+  },
+  "description": {
+    "en": "Allow users to quickly create voice channels by joining a voicechannel",
+    "de": "Erlaube es Nutzern, ihren eigenen Voice-Channel zu erstellen, indem sie einem VC joinen"
+  }
+}

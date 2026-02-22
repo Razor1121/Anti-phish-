@@ -1,0 +1,130 @@
+{
+  "description": {},
+  "humanName": {
+    "en": "Configuration",
+    "de": "Konfiguration"
+  },
+  "filename": "config.json",
+  "configElements": true,
+  "content": [
+    {
+      "name": "channelID",
+      "humanName": {
+        "en": "Channel",
+        "de": "Kanal"
+      },
+      "default": {
+        "en": ""
+      },
+      "description": {
+        "en": "Channel-ID to run all operations in it",
+        "de": "Kanal-ID, in welchem alle Aktionen ausgeführt werden"
+      },
+      "type": "channelID"
+    },
+    {
+      "name": "roles",
+      "humanName": {
+        "en": "Listed Roles",
+        "de": "Gelistete Rollen"
+      },
+      "default": {
+        "en": [],
+        "de": []
+      },
+      "description": {
+        "en": "Roles that should be listed in the embed",
+        "de": "Jede Rolle, die im Embed gelistet werden soll"
+      },
+      "type": "array",
+      "content": "roleID"
+    },
+    {
+      "name": "descriptions",
+      "humanName": {
+        "en": "Descriptions of roles",
+        "de": "Beschreibung von Rollen"
+      },
+      "default": {
+        "en": [],
+        "de": {}
+      },
+      "description": {
+        "en": "Optional description of a listed role (Field 1: Role-ID, Field 2: Description)",
+        "de": "Optionale Beschreibung einer gelisteten Rolle (Feld 1: Rollen-ID, Feld 2: Beschreibung)"
+      },
+      "type": "keyed",
+      "content": {
+        "key": "roleID",
+        "value": "string"
+      }
+    },
+    {
+      "name": "embed",
+      "humanName": {
+        "en": "Embed"
+      },
+      "default": {
+        "en": {
+          "title": "Our staff",
+          "description": "Meet our staff here",
+          "color": "GREEN",
+          "thumbnail-url": "",
+          "img-url": ""
+        },
+        "de": {
+          "title": "Unser Team",
+          "description": "Hier findest du alle unsere Teammitglieder",
+          "color": "GREEN",
+          "thumbnail-url": "",
+          "img-url": ""
+        }
+      },
+      "description": {
+        "en": "Configuration of the member-embed",
+        "de": "Konfiguration des Partner-Embeds"
+      },
+      "type": "keyed",
+      "content": {
+        "key": "string",
+        "value": "string"
+      },
+      "disableKeyEdits": true
+    },
+    {
+      "name": "nameOverwrites",
+      "humanName": {
+        "en": "Name-Overwrites",
+        "de": "Name-Overwrites"
+      },
+      "default": {
+        "en": [],
+        "de": {}
+      },
+      "description": {
+        "en": "optional; Allows to overwrite the displayed name of roles (Field 1: Role-ID, Field 2: Displayed Name)",
+        "de": "optional; Allows to overwrite the displayed name of a role (Feld 1: Rollen-ID, Feld 2: Angezeigter Name)"
+      },
+      "type": "keyed",
+      "content": {
+        "key": "roleID",
+        "value": "string"
+      }
+    },
+    {
+      "name": "includeStatus",
+      "humanName": {
+        "en": "Include Online-Status of Staff-Members",
+        "de": "Online-Status von Teammitgliedern anzeigen"
+      },
+      "description": {
+        "en": "If enabled, the current online status will be displayed in the staffmember-list",
+        "de": "Wenn aktiviert, wird der aktuelle Status in der Teammitglieder-Liste angezeigt"
+      },
+      "type": "boolean",
+      "default": {
+        "en": false
+      }
+    }
+  ]
+}

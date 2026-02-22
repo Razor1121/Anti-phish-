@@ -1,0 +1,62 @@
+{
+  "description": {
+    "en": "Configure the function of the module here",
+    "de": "Stelle hier die Funktionen des Modules ein"
+  },
+  "humanName": {
+    "en": "Configuration",
+    "de": "Konfiguration"
+  },
+  "filename": "config.json",
+  "content": [
+    {
+      "name": "words",
+      "humanName": {
+        "en": "Words",
+        "de": "Statusinhalt"
+      },
+      "default": {
+        "en": [],
+        "de": []
+      },
+      "description": {
+        "en": "Words users should have in their status.",
+        "de": "Wörter, die Nutzer in ihrem Status haben sollen."
+      },
+      "type": "array",
+      "content": "string"
+    },
+    {
+      "name": "roles",
+      "humanName": {
+        "en": "Roles",
+        "de": "Rollen"
+      },
+      "default": {
+        "en": [],
+        "de": []
+      },
+      "description": {
+        "en": "Roles to give to users with one of the words in their status",
+        "de": "Rollen, die an Nutzer mit einem der Wörter im Status vergeben werden sollen"
+      },
+      "type": "array",
+      "content": "roleID"
+    },
+    {
+      "name": "remove",
+      "humanName": {
+        "en": "Remove all other roles",
+        "de": "Entferne alle anderen Rollen"
+      },
+      "default": {
+        "en": false
+      },
+      "description": {
+        "en": "Remove all other roles from users with one of the words in their status",
+        "de": "Entferne alle anderen Rollen von Nutzern mit einem der Wörter im Status"
+      },
+      "type": "boolean"
+    }
+  ]
+}

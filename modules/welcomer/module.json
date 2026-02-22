@@ -1,0 +1,27 @@
+{
+  "name": "welcomer",
+  "author": {
+    "scnxOrgID": "1",
+    "name": "SCDerox (SC Network Team)",
+    "link": "https://github.com/SCDerox"
+  },
+  "openSourceURL": "https://github.com/SCNetwork/CustomDCBot/tree/main/modules/welcomer",
+  "events-dir": "/events",
+  "models-dir": "/models",
+  "config-example-files": [
+    "configs/channels.json",
+    "configs/random-messages.json",
+    "configs/config.json"
+  ],
+  "tags": [
+    "administration"
+  ],
+  "humanReadableName": {
+    "en": "Welcome and Boosts",
+    "de": "Willkommen und Boosts"
+  },
+  "description": {
+    "en": "Simple module to say \"Hi\" to new members, give them roles automatically and say \"thanks\" to users who boosted",
+    "de": "Einfaches Modul zum Begrüßen von neuen Usern, zum automatischen Vergeben von Rollen beim Joinen und zum Bedanken bei Boosts."
+  }
+}

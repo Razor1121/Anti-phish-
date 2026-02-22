@@ -1,0 +1,179 @@
+{
+  "description": {
+    "en": "Configure the basic features of the bot here",
+    "de": "Generelle Konfiguration deines Bots"
+  },
+  "humanName": {
+    "en": "Configuration",
+    "de": "Konfiguration"
+  },
+  "filename": "config.json",
+  "content": [
+    {
+      "name": "token",
+      "humanName": {},
+      "default": {
+        "en": "yourtokengoeshere"
+      },
+      "description": {
+        "en": "Replace this with your token"
+      },
+      "hidden": true,
+      "type": "string"
+    },
+    {
+      "name": "prefix",
+      "humanName": {
+        "en": "Prefix of your bot",
+        "de": "Prefix deines Botes"
+      },
+      "default": {
+        "en": "!"
+      },
+      "description": {
+        "en": "Set the prefix of your bot here",
+        "de": "Dein eigener Prefix - Wir empfehlen ihn einfach bei ! zu belassen."
+      },
+      "type": "string"
+    },
+    {
+      "name": "botOperators",
+      "humanName": {},
+      "default": {
+        "en": []
+      },
+      "description": {
+        "en": "Bot operators can reload the configuration and perform system relevant actions with this bot. Please only add users you really trust (and yourself of course)"
+      },
+      "hidden": true,
+      "type": "array",
+      "content": "string"
+    },
+    {
+      "name": "guildID",
+      "humanName": {},
+      "default": {
+        "en": "489786377261678592"
+      },
+      "description": {
+        "en": "Replace this the id of the guild the bot should work in."
+      },
+      "hidden": true,
+      "type": "guildID"
+    },
+    {
+      "name": "disableStatus",
+      "humanName": {
+        "en": "Disable Bot-Status",
+        "de": "Bot-Status deaktivieren"
+      },
+      "default": {
+        "en": false
+      },
+      "description": {
+        "en": "If enabled, the bot won't have a status in discord",
+        "de": "Wenn aktiviert wird der Bot keinen Status in Discord haben"
+      },
+      "type": "boolean"
+    },
+    {
+      "name": "user_presence",
+      "humanName": {
+        "en": "Bot-Status"
+      },
+      "default": {
+        "en": "Change this in your Bot-Configuration on scnx.app",
+        "de": "Ändere das in deiner Bot-Konfiguration auf scnx.app"
+      },
+      "description": {
+        "en": "This will show up in Discord as \"Playing <YourValue>\"",
+        "de": "Das wird in Discord als \"Spielt <Hier der Wert>\" angezeigt"
+      },
+      "type": "string"
+    },
+    {
+      "name": "logLevel",
+      "humanName": {
+        "en": "Logging-Level"
+      },
+      "default": {
+        "en": "debug"
+      },
+      "description": {
+        "en": "Log-Level of the bot. Leave it as it is, if you don't know what this means",
+        "de": "Log-Level des Bots. Belasse es wie es ist, wenn du nicht weißt, was das bedeutet."
+      },
+      "type": "select",
+      "content": [
+        "debug",
+        "info",
+        "warn",
+        "error",
+        "fatal",
+        "off"
+      ]
+    },
+    {
+      "name": "logChannelID",
+      "humanName": {
+        "en": "Log-Channel",
+        "de": "Log-Kanal"
+      },
+      "default": {
+        "en": ""
+      },
+      "description": {
+        "en": "Default log-channel for most modules and used to log relevant information",
+        "de": "Standard Log-Kanal für viele Module. Wird außerdem genutzt, um wesentliche Bot-Informationen zu senden"
+      },
+      "type": "channelID",
+      "allowNull": true
+    },
+    {
+      "name": "timezone",
+      "humanName": {
+        "en": "Timezone",
+        "de": "Zeitzone"
+      },
+      "default": {
+        "en": "Europe/Berlin"
+      },
+      "description": {
+        "en": "Timezone the bot runs in",
+        "de": "Zeitzone in der der Bot laufen soll"
+      },
+      "type": "timezone"
+    },
+    {
+      "name": "disableEveryoneProtection",
+      "humanName": {
+        "en": "Allow @everyone / @here pings",
+        "de": "@everyone und @here Pings erlauben"
+      },
+      "default": {
+        "en": false
+      },
+      "description": {
+        "en": "Allows @everyone and @here pings for messages configurable in the dashboard",
+        "de": "Erlaubt @everyone und @here pings in im Dashboard anpassbaren Nachrichten"
+      },
+      "type": "boolean",
+      "pro": true
+    },
+    {
+      "name": "syncCommandGlobally",
+      "humanName": {
+        "en": "Sync module commands as global commands",
+        "de": "Speichere Modul-Befehle als Globale-Befehle"
+      },
+      "default": {
+        "en": false
+      },
+      "description": {
+        "en": "If enabled, module-commands will be synced to discord as global commands. They will show up on other servers, but won't work. Syncing can take up to 2 hours, so changes may not be reflected immediately.",
+        "de": "Wenn aktiviert, werden Befehle von Modulen als Globale-Befehle zu Discord gesendet. Sie werden auf anderen Servern angezeigt, werden aber nicht funktionieren. Synchronisierung kann bis zu 2 Stunden dauern."
+      },
+      "type": "boolean"
+    }
+  ]
+}

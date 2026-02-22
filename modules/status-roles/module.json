@@ -1,0 +1,24 @@
+{
+  "name": "status-roles",
+  "author": {
+    "name": "hfgd",
+    "link": "https://github.com/hfgd123",
+    "scnxOrgID": "2"
+  },
+  "openSourceURL": "https://github.com/hfgd123/CustomDCBot/tree/main/modules/status-roles",
+  "events-dir": "/events",
+  "config-example-files": [
+    "configs/config.json"
+  ],
+  "tags": [
+    "administration"
+  ],
+  "humanReadableName": {
+    "en": "Status-roles",
+    "de": "Status-Rollen"
+  },
+  "description": {
+    "en": "Simple module to reward users who have an invite to your server in their status!",
+    "de": "Einfaches Modul, um Nutzer zu belohnen, die einen Link zu deinem Server in ihrem Status haben!"
+  }
+}

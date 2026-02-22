@@ -1,0 +1,364 @@
+{
+  "description": {
+    "en": "Configure here, how the module should behave",
+    "de": "Stelle hier ein, wie sich das Modul verhalten soll"
+  },
+  "humanName": {
+    "en": "Configuration",
+    "de": "Konfiguration"
+  },
+  "filename": "config.json",
+  "content": [
+    {
+      "name": "admins",
+      "humanName": {
+        "en": "Administrators",
+        "de": "Administratoren"
+      },
+      "default": {
+        "en": []
+      },
+      "description": {
+        "en": "Users who can perform admin only actions e.g. manage the balance of users (Bot Operators always have this permission)",
+        "de": "Benutzer*innen die Admin only Aktionen ausführen können, wie z.B. die Balance von Benutzern ändern (Bot-Operatoren haben immer diese Berechtigung)"
+      },
+      "type": "array",
+      "content": "integer"
+    },
+    {
+      "name": "allowCheats",
+      "humanName": {},
+      "default": {
+        "en": false
+      },
+      "description": {
+        "en": "Allow admins to edit the balance of users (for a fair system not recommended!)"
+      },
+      "type": "boolean"
+    },
+    {
+      "name": "selfBalance",
+      "humanName": {},
+      "default": {
+        "en": false
+      },
+      "description": {
+        "en": "Allow admins to edit their own balance (for a fair system not recommended! DON'T DO THIS!!!!!)"
+      },
+      "type": "boolean"
+    },
+    {
+      "name": "shopManagers",
+      "humanName": {
+        "en": "shop-managers",
+        "de": "Shop-Verwaltung"
+      },
+      "default": {
+        "en": []
+      },
+      "description": {
+        "en": "The Ids of the shop managers (Bot Operators have this permission always)",
+        "de": "Die Benutzer-IDs der Shopverwaltung (Bot-Operatoren haben immer diese Berechtigung)"
+      },
+      "type": "array",
+      "content": "integer"
+    },
+    {
+      "name": "startMoney",
+      "humanName": {
+        "en": "Start Money",
+        "de": "Start Geld"
+      },
+      "default": {
+        "en": 100
+      },
+      "description": {
+        "en": "The amount of money that is given to a new user",
+        "de": "Das Geld, welches einem neuen Benutzer gegeben wird"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "currencyName",
+      "humanName": {
+        "en": "currency name",
+        "de": "Währungsbezeichnung"
+      },
+      "default": {
+        "en": ""
+      },
+      "description": {
+        "en": "The name of the currency",
+        "de": "Der Name der Währung"
+      },
+      "type": "string"
+    },
+    {
+      "name": "currencySymbol",
+      "humanName": {
+        "en": "Symbol of the currency",
+        "de": "Symbol der Währung"
+      },
+      "default": {
+        "en": "💰"
+      },
+      "description": {
+        "en": "The symbol of the currency",
+        "de": "Das Symbol der Währung"
+      },
+      "type": "string"
+    },
+    {
+      "name": "maxWorkMoney",
+      "humanName": {
+        "en": "max work money",
+        "de": "Maximaler Arbeits Lohn"
+      },
+      "default": {
+        "en": 100
+      },
+      "description": {
+        "en": "The highest amount of money you can get for working",
+        "de": "Der höchte Betrag, den man fürs Arbeiten bekommen kann"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "minWorkMoney",
+      "humanName": {
+        "en": "min work money",
+        "de": "Mainimaler Arbeits Lohn"
+      },
+      "default": {
+        "en": 20
+      },
+      "description": {
+        "en": "The lowest amount of money you can get for working",
+        "de": "Der niedrigste Betrag, den man fürs Arbeiten bekommen kann"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "workCooldown",
+      "humanName": {
+        "en": "work cooldown",
+        "de": "Arbeits Cooldown"
+      },
+      "default": {
+        "en": 20
+      },
+      "description": {
+        "en": "The amount of time a user needs to wait util they can use the work command again (in minutes)",
+        "de": "Die Dauer, die Benutzer*innen warten müssen, bevor der Arbeits-Command wieder ausgeführt werden kann (in Minuten)"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "maxCrimeMoney",
+      "humanName": {
+        "en": "max crime money",
+        "de": "Maximales Verbrechens Geld"
+      },
+      "default": {
+        "en": 1000
+      },
+      "description": {
+        "en": "The highest amount of money you can get for crime",
+        "de": "Das maximale Geld, was man dafür bekommen kann, ein Verbrechen zu begehen"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "minCrimeMoney",
+      "humanName": {
+        "en": "min crime money",
+        "de": "Minimales Verbrechens Geld"
+      },
+      "default": {
+        "en": 100
+      },
+      "description": {
+        "en": "The lowest amount of money you can get for crime",
+        "de": "Das minimale Geld, was man dafür bekommen kann, ein Verbrechen zu begehen"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "crimeCooldown",
+      "humanName": {
+        "en": "crime cooldown",
+        "de": "Verbrechens Cooldown"
+      },
+      "default": {
+        "en": 30
+      },
+      "description": {
+        "en": "The amount of time a user needs to wait util they can use the crime command again (in minutes)",
+        "de": "Die Dauer, die Benutzer*innen warten müssen, bevor der Verbrechens-Command wieder ausgeführt werden kann (in Minuten)"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "maxRobAmount",
+      "humanName": {
+        "en": "max rob amount",
+        "de": "Maximale Raub Beute"
+      },
+      "default": {
+        "en": 400
+      },
+      "description": {
+        "en": "The highest amount of money that a user can rob",
+        "de": "Das maximale Geld, was man durch Rauben bekommen kann"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "robPercent",
+      "humanName": {
+        "en": "rob percent",
+        "de": "Raub Prozent"
+      },
+      "default": {
+        "en": 10
+      },
+      "description": {
+        "en": "The amount that can get robed in percent",
+        "de": "Das maximale Geld, was bei einem Raub erbeutet werden kann, in Prozent"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "robCooldown",
+      "humanName": {
+        "en": "rob cooldown",
+        "de": "Raub Cooldown"
+      },
+      "default": {
+        "en": 60
+      },
+      "description": {
+        "en": "The amount of time a user needs to wait util they can use the rob command again (in minutes)",
+        "de": "Die Zeit die Benutzer warten müssen, bis sie den Raub-Command nochmal ausführen können (in Minuten)"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "leaderboardChannel",
+      "humanName": {
+        "en": "leaderboard-channel",
+        "de": "Leaderboard-Kanal"
+      },
+      "default": {
+        "en": ""
+      },
+      "description": {
+        "en": "The if of the channel for the leaderboard. On this leaderboard everyone can see who has the most money.",
+        "de": "Die ID des Kanals für das Leaderboard. Hier kann jeder sehen, wer das meiste Geld hat"
+      },
+      "type": "channelID"
+    },
+    {
+      "name": "shopChannel",
+      "humanName": {
+        "en": "shop channel",
+        "de": "Shop Kanal"
+      },
+      "default": {
+        "en": ""
+      },
+      "description": {
+        "en": "The id of the channel for the shop-Message. This message shows the items of the shop",
+        "de": "Die ID des Kanals für die Shop-Nachricht. Diese Nachricht zeigt alle Items des Shops"
+      },
+      "type": "channelID",
+      "allowNull": true
+    },
+    {
+      "name": "msgDropsIgnoredChannels",
+      "humanName": {
+        "en": "message-drops ignored channels",
+        "de": "Ignorierte Message-Drop Kanäle"
+      },
+      "default": {
+        "en": []
+      },
+      "description": {
+        "en": "List of Channels where Users can't get message-drops",
+        "de": "Liste an Kanälen, in denen Benutzer keine Message-Drops bekommen können"
+      },
+      "type": "array",
+      "content": "string"
+    },
+    {
+      "name": "messageDrops",
+      "humanName": {},
+      "default": {
+        "en": 25
+      },
+      "description": {
+        "en": "Chance to get money for a message (Chance: 1/ This value). Set to 0 to disable message drops"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "messageDropsMax",
+      "humanName": {},
+      "default": {
+        "en": 50
+      },
+      "description": {
+        "en": "The max amount of money in a message Drop"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "messageDropsMin",
+      "humanName": {},
+      "default": {
+        "en": 5
+      },
+      "description": {
+        "en": "The min amount of money in a message Drop"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "dailyReward",
+      "humanName": {},
+      "default": {
+        "en": 25
+      },
+      "description": {
+        "en": "The daily reward"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "weeklyReward",
+      "humanName": {},
+      "default": {
+        "en": 100
+      },
+      "description": {
+        "en": "The weekly reward"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "publicCommandReplies",
+      "humanName": {
+        "en": "Public Command-Replies",
+        "de": "Öffentliche Command-Antworten"
+      },
+      "default": {
+        "en": false
+      },
+      "description": {
+        "en": "Should the Command-replies be displayed for everyone?",
+        "de": "Sollen die Command-Antworten für alle angezeigt werden?"
+      },
+      "type": "boolean"
+    }
+  ]
+}

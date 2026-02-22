@@ -1,0 +1,223 @@
+{
+  "description": {},
+  "humanName": {
+    "en": "Configuration",
+    "de": "Konfiguration"
+  },
+  "filename": "config.json",
+  "categories": [
+    {
+      "name": "interval",
+      "humanname-de": "Intervalle",
+      "humanname-en": "Intervall",
+      "description-de": "Intervalle erlauben es dir, den Status des Bots alle paar Sekunden automatisch zu ändern!",
+      "description-en": "You can use intervalls to automatically change the Status of the bot",
+      "categoryToggle": "enableInterval"
+    }
+  ],
+  "content": [
+    {
+      "name": "enableInterval",
+      "humanName": {
+        "en": "Enable interval?",
+        "de": "Interval aktivieren?"
+      },
+      "default": {
+        "en": false
+      },
+      "description": {
+        "en": "If enabled the bot will change its status every x seconds",
+        "de": "Wenn aktiviert wird sich der Status des Bots alle x Sekunden ändern"
+      },
+      "type": "boolean"
+    },
+    {
+      "name": "intervalStatuses",
+      "dependsOn": "enableInterval",
+      "humanName": {
+        "en": "Interval-Statuses",
+        "de": "Interval-Status"
+      },
+      "default": {
+        "en": []
+      },
+      "description": {
+        "en": "Statuses from which the bot should randomly choose one",
+        "de": "Die Status von denen der Bot einen zufällig wählen soll"
+      },
+      "type": "array",
+      "content": "string",
+      "params": [
+        {
+          "name": "onlineMemberCount",
+          "description": {
+            "en": "Count of online members on your guild (will not work if presence intent not enabled)",
+            "de": "Anzahl der Online-Mitglieder auf deinem Server"
+          }
+        },
+        {
+          "name": "memberCount",
+          "description": {
+            "en": "Count of members on your guild",
+            "de": "Anzahl der Mitglieder auf deinem Server"
+          }
+        },
+        {
+          "name": "randomMemberTag",
+          "description": {
+            "en": "Tag of one random member on your guild",
+            "de": "Erwähnung eines zufälligen Nutzern auf deinem Server"
+          }
+        },
+        {
+          "name": "randomOnlineMemberTag",
+          "description": {
+            "en": "Tag of one random member who is online on your guild",
+            "de": "Erwähnung eines zufälligen online Nutzern auf deinem Server"
+          }
+        },
+        {
+          "name": "channelCount",
+          "description": {
+            "en": "Count of channels on your guild",
+            "de": "Anzahl Channel auf deinem Server"
+          }
+        },
+        {
+          "name": "roleCount",
+          "description": {
+            "en": "Count of roles on your guild",
+            "de": "Anzahl Rollen auf deinem Server"
+          }
+        }
+      ]
+    },
+    {
+      "name": "activityType",
+      "humanName": {
+        "en": "Activity-Type",
+        "de": "Aktivität-Typ"
+      },
+      "default": {
+        "en": "PLAYING"
+      },
+      "description": {
+        "en": "Type of the user activity",
+        "de": "Type der Aktivität deines Bots"
+      },
+      "type": "select",
+      "content": [
+        "CUSTOM",
+        "PLAYING",
+        "WATCHING",
+        "STREAMING",
+        "COMPETING",
+        "LISTENING"
+      ]
+    },
+    {
+      "name": "botStatus",
+      "humanName": {
+        "en": "Bot-Status",
+        "de": "Bot-Status"
+      },
+      "default": {
+        "en": "online"
+      },
+      "description": {
+        "en": "Status of your bot",
+        "de": "Status deines Bots"
+      },
+      "type": "select",
+      "content": [
+        "idle",
+        "online",
+        "dnd"
+      ]
+    },
+    {
+      "name": "interval",
+      "humanName": {
+        "en": "Status-Interval",
+        "de": "Statusänderung-Interval"
+      },
+      "default": {
+        "en": 15
+      },
+      "description": {
+        "en": "The interval in seconds (at least 10 seconds)",
+        "de": "Das Intervall der Statusänderungen in Sekunden (mindestens 10 Sekunden)"
+      },
+      "type": "integer"
+    },
+    {
+      "name": "changeOnUserJoin",
+      "humanName": {
+        "en": "Change status on user join?",
+        "de": "Beim Beitreten Status ändern?"
+      },
+      "default": {
+        "en": false
+      },
+      "description": {
+        "en": "If the status should be changed if someone joins your guild",
+        "de": "Wenn aktiviert wird sich der Status des Bots ändern, wenn jemand deinem Server beitritt"
+      },
+      "type": "boolean"
+    },
+    {
+      "name": "userJoinStatus",
+      "dependsOn": "changeOnUserJoin",
+      "humanName": {
+        "en": "User-Join-Status",
+        "de": "Nutzer-Join-Status"
+      },
+      "default": {
+        "en": "Welcome %tag%!"
+      },
+      "description": {
+        "en": "Status that will be set if a user joins",
+        "de": "Dieser Status wird gesetzt, wenn jemand deinem Server beitritt"
+      },
+      "type": "string",
+      "params": [
+        {
+          "name": "tag",
+          "description": {
+            "en": "Tag of the new user",
+            "de": "Tag des Nutzers"
+          }
+        },
+        {
+          "name": "username",
+          "description": {
+            "en": "Username of the new user",
+            "de": "Nutzername des Nutzers"
+          }
+        },
+        {
+          "name": "memberCount",
+          "description": {
+            "en": "New member count of your guild",
+            "de": "Anzahl der Mitglieder auf deinem Server"
+          }
+        }
+      ]
+    },
+    {
+      "name": "streamingLink",
+      "type": "string",
+      "humanName": {
+        "en": "Steaming-Link",
+        "de": "Stream-Link"
+      },
+      "default": {
+        "en": ""
+      },
+      "description": {
+        "de": "Wird angezeigt, wenn der Aktivität-Typ auf streaming ist und der Link von Discord unterstützt wird",
+        "en": "Will be shown, if the activity-typ is streaming and your link is supported by Discord"
+      }
+    }
+  ]
+}

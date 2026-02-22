@@ -1,0 +1,26 @@
+{
+  "name": "polls",
+  "author": {
+    "scnxOrgID": "1",
+    "name": "SCDerox (SC Network Team)",
+    "link": "https://github.com/SCDerox"
+  },
+  "description": {
+    "en": "Simple module to create fresh polls on your server!"
+  },
+  "events-dir": "/events",
+  "commands-dir": "/commands",
+  "models-dir": "/models",
+  "config-example-files": [
+    "configs/config.json",
+    "configs/strings.json"
+  ],
+  "tags": [
+    "community"
+  ],
+  "openSourceURL": "https://github.com/SCNetwork/CustomDCBot/tree/main/modules/polls",
+  "humanReadableName": {
+    "en": "Polls",
+    "de": "Umfragen"
+  }
+}

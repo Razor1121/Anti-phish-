@@ -1,0 +1,24 @@
+{
+  "name": "auto-publisher",
+  "author": {
+    "scnxOrgID": "1",
+    "name": "SCDerox (SC Network Team)",
+    "link": "https://github.com/SCDerox"
+  },
+  "openSourceURL": "https://github.com/SCNetwork/CustomDCBot/tree/main/modules/auto-publisher",
+  "events-dir": "/events",
+  "config-example-files": [
+    "config.json"
+  ],
+  "tags": [
+    "tools"
+  ],
+  "humanReadableName": {
+    "en": "Automatic Publishing",
+    "de": "Automatische Veröffentlichung"
+  },
+  "description": {
+    "en": "Publishes messages in announcement channels",
+    "de": "Veröffentlicht Nachrichten in Ankündigungskanälen"
+  }
+}
