@@ -70,6 +70,7 @@
       "allowEmbed": true
     },
     {
+<<<<<<< HEAD
       "name": "phishing-log-entry",
       "humanName": {},
       "default": {
@@ -89,6 +90,8 @@
       ]
     },
     {
+=======
+>>>>>>> bdf48c957889f18888d1525806101cb792e35246
       "name": "submitted-report-message",
       "humanName": {},
       "default": {

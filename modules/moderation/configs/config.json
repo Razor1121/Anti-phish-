@@ -245,6 +245,7 @@
       ]
     },
     {
+<<<<<<< HEAD
       "name": "phishing-log-channel-id",
       "humanName": {
         "de": "Phishing-Protokoll-Kanal",
@@ -262,6 +263,8 @@
       "allowNull": true
     },
     {
+=======
+>>>>>>> bdf48c957889f18888d1525806101cb792e35246
       "name": "scam_link_level",
       "humanName": {
         "de": "Level der Scam-Link-Erkennung",
@@ -333,6 +336,7 @@
       "content": "string"
     },
     {
+<<<<<<< HEAD
       "name": "phishing-custom-patterns",
       "humanName": {
         "de": "Eigene Phishing-Muster",
@@ -350,6 +354,8 @@
       "content": "string"
     },
     {
+=======
+>>>>>>> bdf48c957889f18888d1525806101cb792e35246
       "name": "action_on_posting_blacklisted_word",
       "humanName": {
         "de": "Aktion bei gesperrtem Wort",

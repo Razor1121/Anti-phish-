@@ -10,8 +10,12 @@
   "scripts": {
     "start": "node main.js",
     "generate-config": "node generate-config.js",
+<<<<<<< HEAD
     "generate-template": "node generate-template.js",
     "test": "jest"
+=======
+    "generate-template": "node generate-template.js"
+>>>>>>> bdf48c957889f18888d1525806101cb792e35246
   },
   "author": "ScootKit Team",
   "contributors": [
@@ -41,6 +45,7 @@
     "parse-duration": "1.1.0",
     "sequelize": "6.33.0",
     "sqlite3": "5.1.6",
+<<<<<<< HEAD
     "stop-discord-phishing": "0.3.3",
     "express": "^4.18.2",
     "axios": "^1.4.0",
@@ -50,6 +55,9 @@
   },
   "devDependencies": {
     "jest": "^29.0.0"
+=======
+    "stop-discord-phishing": "0.3.3"
+>>>>>>> bdf48c957889f18888d1525806101cb792e35246
   },
   "optionalDependencies": {
     "erlpack": "github:discord/erlpack",

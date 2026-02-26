@@ -93,9 +93,12 @@ can verify this by looking at the source code, which you should do before execut
 
 * Everything is split in different [modules](#modules) - you can enable, configure and disable it how you want
 * Highly configurable - The goal with this bot is that you can change *everything*
+<<<<<<< HEAD
 * Built-in phishing and scam URL detection with customizable patterns & ML heuristics (moderation module) including optional log channel for detections
 
 * A small suite of unit tests for the moderation/phishing logic – run with `npm test`
+=======
+>>>>>>> bdf48c957889f18888d1525806101cb792e35246
 * Add your own modules
 * Easy configuration - Every config field has a description in an example file
 

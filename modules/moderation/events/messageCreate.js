@@ -2,8 +2,11 @@ const {moderationAction} = require('../moderationActions');
 const {embedType} = require('../../../src/functions/helpers');
 const {localize} = require('../../../src/functions/localize');
 const stopPhishing = require('stop-discord-phishing');
+<<<<<<< HEAD
 // built-in phishing service (uses ML/heuristics plus configurable patterns)
 const { checkPhishing } = require('../phishingService');
+=======
+>>>>>>> bdf48c957889f18888d1525806101cb792e35246
 
 const messageCache = {};
 
@@ -90,6 +93,7 @@ async function performBadWordAndInviteProtection(msg) {
     const moduleConfig = msg.client.configurations['moderation']['config'];
     if (msg.member.roles.cache.find(r => moduleConfig['moderator-roles_level2'].includes(r.id) || moduleConfig['moderator-roles_level3'].includes(r.id) || moduleConfig['moderator-roles_level4'].includes(r.id))) return;
     if (moduleConfig['action_on_scam_link'] !== 'none') {
+<<<<<<< HEAD
         // first run our custom analyzer, which also respects user-defined patterns
         const analysis = await checkPhishing({message: msg.content});
         if (analysis.isPhishing) {
@@ -110,6 +114,8 @@ async function performBadWordAndInviteProtection(msg) {
             return;
         }
         // fallback to old library if desired
+=======
+>>>>>>> bdf48c957889f18888d1525806101cb792e35246
         if (await stopPhishing.checkMessage(msg.content, moduleConfig['action_on_scam_link'] === 'suspicious')) {
             await msg.delete();
             await moderationAction(msg.client, moduleConfig['action_on_scam_link'], msg.client, msg.member, localize('moderation', 'scam-url-sent', {c: msg.channel.toString()}), {roles: msg.member.roles.cache.keys()});

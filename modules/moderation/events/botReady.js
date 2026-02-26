@@ -3,8 +3,11 @@ const {Op} = require('sequelize');
 const {localize} = require('../../../src/functions/localize');
 const {embedType} = require('../../../src/functions/helpers');
 const {scheduleJob} = require('node-schedule');
+<<<<<<< HEAD
 // import phishing service so that we can feed it custom patterns from configuration
 const { setCustomPatterns } = require('../phishingService');
+=======
+>>>>>>> bdf48c957889f18888d1525806101cb792e35246
 const memberCache = {};
 const durationParser = require('parse-duration');
 
@@ -35,6 +38,7 @@ exports.run = async (client) => {
         });
     }
 
+<<<<<<< HEAD
     // configure phishing service with custom patterns from settings
     const customPatterns = client.configurations['moderation']['config']['phishing-custom-patterns'];
     if (Array.isArray(customPatterns) && customPatterns.length > 0) {
@@ -42,6 +46,8 @@ exports.run = async (client) => {
         client.logger.info('[moderation] loaded ' + customPatterns.length + ' custom phishing pattern(s)');
     }
 
+=======
+>>>>>>> bdf48c957889f18888d1525806101cb792e35246
     const verificationConfig = client.configurations['moderation']['verification'];
     if (!verificationConfig.enabled || !verificationConfig['restart-verification-channel']) return;
     const channel = await client.channels.fetch(verificationConfig['restart-verification-channel']).catch(() => {
